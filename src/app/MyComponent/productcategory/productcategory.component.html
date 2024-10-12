@@ -1,0 +1,19 @@
+<div class="container" style="background-color:rgba(248, 247, 247, 0.932);">
+    <h3 style="text-align: center;padding-top: 20px;">Latest Products</h3>
+      <div class="row">
+          <ng-container *ngFor="let items of productCategoryList">
+              <div class="card col-md-3" (click)="showDetails(items)">
+                  <img src="{{items.images[0]}}">
+                  <h5 style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch">
+                 {{items.title}}
+                  </h5>
+                  <p style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch">
+                  {{items.description}}
+                  </p><strong>Price: $ {{items.price}}</strong>
+                 <button class="btn btn-primary">Add to cart</button>
+              </div>
+          </ng-container>
+          
+      </div>
+  
+  </div>

@@ -1,0 +1,63 @@
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+}
+.item-image {
+    width: 280px;
+    height:280px;
+  }
+
+.card{
+    padding:20 px;
+    margin:50px
+}
+.card img{
+    width:200px;
+    height:300px;
+    margin-bottom: 10px;
+}
+.nav-link{
+    margin-left:10px
+}
+.brands-img{
+    height:350px;
+    width:350px;
+
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Set the desired height */
+  }
+  
+  .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  }
+  
+.img-email {
+    width: 100%;
+    height:350px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display:block;
+  
+  }
+  .email-input {
+    position: absolute;
+    top: 50%;
+    left:25% ;/* Position input at 50% from the top */
+    padding: 10px;
+    width:50%
+  }
+

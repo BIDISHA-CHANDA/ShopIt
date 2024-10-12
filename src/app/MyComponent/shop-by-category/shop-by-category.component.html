@@ -1,0 +1,21 @@
+<div class="prod-display">
+
+    <h3 style="text-align: center;padding-top: 20px;">Latest Products</h3>
+    <div class="row">
+        <ng-container *ngFor="let items of productlist">
+            <div class="card col-md-3" >
+                <img src="{{items.image}}">
+                <h5 style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch">
+               {{items.title}}
+                </h5>
+                <p style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch">
+                {{items.description}}
+                </p><strong>Price: $ {{items.price}}</strong>
+                <button class="btn btn-primary" (click)="productDetails(items)">Show Product Details</button>
+               <button class="btn btn-primary" (click)="addToCart(items)">Add to cart</button>
+            </div>
+        </ng-container>
+        
+    </div>
+
+  </div>

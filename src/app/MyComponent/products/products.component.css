@@ -1,0 +1,144 @@
+.main-container{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  padding:2% 5% 0% 5%; ;
+  background-color: aliceblue;
+ 
+  }
+  .carousal{
+    display:flex;
+    width:100%;
+    height:50%;
+    background-color: blue;
+  }
+
+  
+  ::ng-deep .carousel .carousel-inner img {
+    width: 1740px !important;
+    height: 390px !important;
+  }
+
+  .categories{
+    display:flex;
+   flex-direction:column;
+   justify-content: space-evenly;
+   .item-image {
+    width: 280px;
+    height:280px;
+  }
+
+  }
+  
+ .electronics-section{
+  display:flex;
+  flex-direction: row;
+  background-color:white;
+  width:100%;
+  height:300px;
+  margin-bottom:20px;
+  align-items: center;
+ }
+ .electronics-section img{
+  height:100px;
+  width:100px;
+ }
+ .elec-section{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height:200px;
+  width:200px;
+
+ }
+ .food-section{
+  display:flex;
+  flex-direction: row;
+  background-color:white;
+  width:100%;
+  height:300px;
+ }
+ .food-section img{
+  height:100px;
+  width:100px;
+ }
+   .brands{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+margin-left:20%;    .brands-img{
+      height:60%;
+      width:70%;
+  
+  }
+   }
+   .notify{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+    .img-email {
+      position:absolute;
+      width: 100%;
+      height:350px;
+      background-color: rgba(0, 0, 0, 0.5); 
+      display:flex;
+    
+    }
+    .email-input {
+      position: relative;
+      z-index: 1;
+      padding: 10px;
+      width: 80%; /* Adjust input width */
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: white;
+    
+   }
+}
+
+
+.card{
+    padding:20 px;
+    margin:50px
+}
+.card img{
+    width:200px;
+    height:300px;
+    margin-bottom: 10px;
+}
+.nav-link{
+    margin-left:10px
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Set the desired height */
+  }
+  
+ /*  .notify::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  } */
+  
+
+  /* .email-input {
+    position: absolute;
+    top: 50%;
+    left:25% ;
+    padding: 10px;
+    width:50%
+  } */
+
+
+

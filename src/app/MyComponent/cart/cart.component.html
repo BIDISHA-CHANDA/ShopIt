@@ -1,0 +1,165 @@
+<section class="h-100 h-custom">
+    <div class="container h-100 py-5">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+  
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="h5">Shopping Bag</th>
+                  <th scope="col">Format</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Actions</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let items of cartproductlist,let i=index">
+                <tr>
+                  <th scope="row" >
+                    <div class="d-flex align-items-center">
+                      <img src="{{items.image}}" class="img-fluid rounded-3"
+                        style="width: 120px;" alt="Book">
+                      <div class="flex-column ms-4">
+                        <p class="mb-2">{{items.description}}</p>
+                        <p class="mb-0"></p>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="align-middle">
+                    <p class="mb-0" style="font-weight: 500;">Digital</p>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-row">
+                      
+  
+                      <input id="form1" min="0" name="quantity" value="{{items.quantity}}" type="number"
+                        class="form-control form-control-sm" style="width: 50px;" />
+  
+                     
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16" (click)="delteleItem(items)">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                      </svg>
+                  </td>
+                  <td class="align-middle">
+                    <p class="mb-0" style="font-weight: 500;"><strong>${{ items.price * items.quantity }}</strong></p>
+                  </td>
+                  
+                </tr>
+                <tr>
+                
+              </tbody>
+            </table>
+          </div>
+  
+          <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+            <div class="card-body p-4">
+  
+              <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                  <form>
+                    <div class="d-flex flex-row pb-3">
+                      <div class="d-flex align-items-center pe-2">
+                        <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1v"
+                          value="" aria-label="..." checked />
+                      </div>
+                      <div class="rounded border w-100 p-3">
+                        <p class="d-flex align-items-center mb-0">
+                          <i class="fab fa-cc-mastercard fa-2x text-dark pe-2"></i>Credit
+                          Card
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row pb-3">
+                      <div class="d-flex align-items-center pe-2">
+                        <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2v"
+                          value="" aria-label="..." />
+                      </div>
+                      <div class="rounded border w-100 p-3">
+                        <p class="d-flex align-items-center mb-0">
+                          <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Debit Card
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="d-flex align-items-center pe-2">
+                        <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
+                          value="" aria-label="..." />
+                      </div>
+                      <div class="rounded border w-100 p-3">
+                        <p class="d-flex align-items-center mb-0">
+                          <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>PayPal
+                        </p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-6">
+                  <div class="row">
+                    <div class="col-12 col-xl-6">
+                      <div class="form-outline mb-4 mb-xl-5">
+                        <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                          placeholder="John Smith" />
+                        <label class="form-label" for="typeName">Name on card</label>
+                      </div>
+  
+                      <div class="form-outline mb-4 mb-xl-5">
+                        <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YY"
+                          size="7" id="exp" minlength="7" maxlength="7" />
+                        <label class="form-label" for="typeExp">Expiration</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                      <div class="form-outline mb-4 mb-xl-5">
+                        <input type="text" id="typeTextnumber" class="form-control form-control-lg" siez="17"
+                          placeholder="1111 2222 3333 4444" minlength="19" maxlength="19" />
+                        <label class="form-label" for="typeTextnumber">Card Number</label>
+                      </div>
+  
+                      <div class="form-outline mb-4 mb-xl-5">
+                        <input type="password" id="typeTextpassword" class="form-control form-control-lg"
+                          placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                        <label class="form-label" for="typeTextpassword">Cvv</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xl-3">
+                  <div class="d-flex justify-content-between" style="font-weight: 500;">
+                    <p class="mb-2">Subtotal</p>
+                    <p class="mb-2">{{subTotal()}}</p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between" style="font-weight: 500;">
+                    <p class="mb-0">Shipping</p>
+                    <p class="mb-0">$2.99</p>
+                  </div>
+  
+                  <hr class="my-4">
+  
+                  <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                    <p class="mb-2">Total (tax included)</p>
+                    <p class="mb-2">$26.48</p>
+                  </div>
+  
+                  <button type="button" class="btn btn-primary btn-block btn-lg">
+                    <div class="d-flex justify-content-between">
+                      <span>Checkout</span>
+                      <span>$26.48</span>
+                    </div>
+                  </button>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>

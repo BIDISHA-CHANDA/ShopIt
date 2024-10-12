@@ -1,0 +1,32 @@
+
+
+
+
+
+  <div class="container" style="background-color:rgba(248, 247, 247, 0.932);">
+    <div *ngIf="saleproductlist && saleproductlist.length">
+
+      <div class="row">
+          <ng-container *ngFor="let product of saleproductlist">
+            <div (click)="showproductdetails(product)"class="card col-md-3" >
+            <h5 style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch">
+                {{ product.title }}
+              </h5>
+                  <img src="{{product.images[0]}}">
+                  
+                  <p style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch">
+                    {{ product.description }}
+                  </p><strong>Price: $ {{ product.price | currency }}</strong>
+                  <p>Category: {{ product.category }}</p>
+                  <p>Rating: {{ product.rating }} (Stock: {{ product.stock }})</p>
+                </div>
+                </ng-container>
+              </div>
+         
+          
+      </div>
+   
+    <div *ngIf="!saleproductlist || saleproductlist.length === 0">
+        <p>No products available.</p>
+      </div>
+  </div>
