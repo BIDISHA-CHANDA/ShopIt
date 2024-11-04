@@ -1,0 +1,109 @@
+<section class="h-100 bg-light">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://images.pexels.com/photos/6995253/pexels-photo-6995253.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase" style="text-align: center;">We Shop</h3>
+                  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" >
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg"  formControlName="firstName"/>
+                        <label class="form-label" for="form3Example1m">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg"formControlName="lastName" />
+                        <label class="form-label" for="form3Example1n">Last name</label>
+                      </div>
+                    </div>
+                  </div>
+  
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example8" class="form-control form-control-lg" formControlName="address"/>
+                    <label class="form-label" for="form3Example8">Address</label>
+                  </div>
+  
+                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h6 class="mb-0 me-4">Gender: </h6>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio"  id="femaleGender"
+                        value="option1"formControlName="gender" />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" formControlName="gender" id="maleGender"
+                        value="option2" />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0">
+                      <input class="form-check-input" type="radio" formControlName="gender" id="otherGender"
+                        value="option3" />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+  
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+  
+                      <select class="select" formControlName="state">
+                        <option value="1">State</option>
+                        <option value="2">Option 1</option>
+                        <option value="3">Option 2</option>
+                        <option value="4">Option 3</option>
+                      </select>
+  
+                    </div>
+                    <div class="col-md-6 mb-4">
+  
+                      <select class="select" formControlName="city">
+                        <option value="1">City</option>
+                        <option value="2">Option 1</option>
+                        <option value="3">Option 2</option>
+                        <option value="4">Option 3</option>
+                      </select>
+  
+                    </div>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example9" class="form-control form-control-lg"formControlName="dob" />
+                    <label class="form-label" for="form3Example9">DOB</label>
+                  </div>
+  
+                 
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example97" class="form-control form-control-lg" formControlName="email"/>
+                    <label class="form-label" for="form3Example97">Email ID</label>
+                  </div>
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                    <button type="submit" class="btn btn-warning btn-lg ms-2" (click)="onRegister()">Submit form</button>
+                  </div>
+                  </form>
+                 <!--  {{registrationForm.value | json}} -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

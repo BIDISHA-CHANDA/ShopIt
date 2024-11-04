@@ -1,0 +1,13 @@
+<div *ngIf="productdetails">
+    <h1>{{ productdetails.title }}</h1>
+    <p>{{ productdetails.description }}</p>
+    <p>Price: {{ productdetails.price | currency }}</p>
+    <img [src]="productdetails.image" alt="{{ productdetails.title }}" width="300">
+    <p>Category: {{ productdetails.category }}</p>
+<!--     <p>Rating: {{ productdetails.rating.rate }} ({{ productdetails.rating.count }} reviews)</p>
+ -->  </div>
+  <button mat-raised-button routerLink="/">Go to Categories</button>
+  <button mat-raised-button color="primary" (click)="addToCart(productdetails)">Add to cart</button>
+
+
+

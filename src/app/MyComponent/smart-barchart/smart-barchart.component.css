@@ -1,0 +1,68 @@
+.smart-container{
+  width:900px;
+  z-index:1
+}
+.smart-chart-axis-text{
+  font-weight:bold
+}
+.smart-chart-tooltip-content {
+    
+    background: darkslategrey !important;
+    height:auto !important;
+    align-items: center;
+}
+.smart-chart-tooltip-text {
+    color: white !important;
+}
+
+ #chart .smart-chart-legend-text {
+    
+    
+    transform: translateY(-80%);
+}
+#chart .smart-chart-axis-description{
+    margin-left: 10px !important;
+}
+
+
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;/* Optional: Align items vertically */
+
+  }
+  .box {
+    display: flex;
+}
+
+  
+  .label {
+    font-weight: bold;
+    margin-left: 5px; 
+    /* Adjust as needed */
+  }
+
+  .box1 {
+    width: 1px; /* Set width as needed */
+    height: 1px; /* Set height as needed */
+    background-color: #f0f0f0; /* Set background color */
+    border: 1px solid #ccc; /* Add border */
+    padding: 10px; 
+    background-color: #66ffff;/* Add padding */
+    
+  }
+  .box2{
+    width: 1px; /* Set width as needed */
+    height: 1px; /* Set height as needed */
+    background-color: #008080; /* Set background color */
+    border: 1px solid #ccc; /* Add border */
+    padding: 10px;
+    margin-left: 10px; /* Add padding */
+  }
+  
