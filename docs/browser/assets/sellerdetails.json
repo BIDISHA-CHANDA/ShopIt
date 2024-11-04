@@ -1,0 +1,43 @@
+[
+    {
+      "name": "Analytics Scenario Builder",
+      "title": "Analytics Scenario Builder",
+      "paragraph": "Create and compare different scenarios based on configurable sensitivity",
+      "links": {
+        "link1": "Price & Margin Sensitivity",
+        "link2": "Third Party Price Sensitivity",
+        "link3": "Time & Depth Sensitivity",
+        "link4": "Competition Sensitivi",
+        "link5": "Category Sensitivity"
+      
+        
+
+        
+        
+      }
+    },
+    {
+      "name": "Analytics Insights",
+      "title": "Analytics Insights",
+      "paragraph": "Useful Insights and comparative analysis",
+      "links": {
+        "link1": "Planned Vs Execution",
+        "link2": "Section Price Analysis",
+        "link3": "Well Design Analysis",
+        "link4": "Business Design Analysis",
+        "link5": "Fixed and Variable"
+      
+      }
+    },
+    {
+      "name": "My Analytic Zone",
+      "title": "My Analytic Zone",
+      "paragraph": "Home to your saved scenarios",
+      "links": {
+        "link1": "User Name_001",
+        "link2": "User Name_002",
+        "link3": "User Name_003",
+        "link4": "User Name_004"
+        
+      }
+    }]

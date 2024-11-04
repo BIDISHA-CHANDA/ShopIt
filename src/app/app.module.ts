@@ -3,12 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodosComponent } from './MyComponent/todos/todos.component';
-import { TodosItemComponent } from './MyComponent/todos-item/todos-item.component';
-import { AddTodoComponent } from './MyComponent/add-todo/add-todo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { TodoMainComponent } from './MyComponent/todo-main/todo-main.component';
 import { LoginComponent } from './MyComponent/login/login.component';
 import { RegisterComponent } from './MyComponent/register/register.component';
 import { HeaderComponent } from './MyComponent/header/header.component';
@@ -25,14 +21,9 @@ import { ShopByCategoryComponent } from './MyComponent/shop-by-category/shop-by-
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent,
-    TodosItemComponent,
-    AddTodoComponent,
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
@@ -43,10 +34,6 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     ProductsdetailsComponent,
     SaleproductComponent,
     ShopByCategoryComponent,
-    
-   
-    
-
   ],
   imports: [
     BrowserModule,
@@ -56,15 +43,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     ReactiveFormsModule,
     HttpClientModule,
     MdbCarouselModule,
-    CarouselModule.forRoot()
-
- 
-    
-    
+    CarouselModule.forRoot(),
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideAnimationsAsync()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
